@@ -52,8 +52,8 @@ public class TicketDao implements Dao<Ticket> {
 
     /* mettre à jour un ticket*/
     public Ticket update(Long id, Ticket ticket) {
-        String sql = "UPDATE ticket SET  date = ?, description = ? WHERE id_ticket = ?";
-       jdbcTemplate.update(sql, ticket.getDate(),ticket.getDescription(),id);
+        String sql = "UPDATE ticket SET  date = ?, description = ?, dateresolution =? WHERE id_ticket = ?";
+       jdbcTemplate.update(sql, ticket.getDate(),ticket.getDescription(),ticket.getDateresolution(),id);
         return ticket;
     }
     }

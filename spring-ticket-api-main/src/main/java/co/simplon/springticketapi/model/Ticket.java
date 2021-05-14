@@ -7,17 +7,19 @@ public class Ticket {
     private LocalDateTime date;
     private String description;
     private int idlearner;
+    private LocalDateTime dateresolution;
 
     public Ticket(LocalDateTime localDateTime) {
         this.date = localDateTime;
     }
 
 
-    public Ticket(Long id, LocalDateTime date, String description,int idlearner) {
+    public Ticket(Long id, LocalDateTime date, String description,int idlearner, LocalDateTime dateresolution) {
         this.id = id;
         this.date = date;
         this.description = description ;
         this.idlearner = idlearner;
+        this.dateresolution = dateresolution;
     }
     public Long getId() {
         return id;
@@ -28,10 +30,10 @@ public class Ticket {
     public String getDescription() {
         return description;
     }
-
     public int getIdlearner() {
         return idlearner;
     }
+    public LocalDateTime getDateresolution() {return dateresolution; }
 
     @Override
     public String toString() {
@@ -40,6 +42,7 @@ public class Ticket {
                 ", date=" + date +
                 ", description='" + description + '\'' +
                 ", idlearner=" + idlearner +
+                ", dateresolution=" + dateresolution +
                 '}';
     }
 }

@@ -836,7 +836,7 @@ sequence|table|24686|24688|1
     <database id="7" parent="1" name="ticket">
       <ObjectId>24720</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1253</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1297</IntrospectionStateNumber>
       <Relations>sequence|table|24748|24750|1
 sequence|table|24727|24721|1
 sequence|table|24730|24732|1
@@ -910,7 +910,7 @@ UC/10
 </Acl>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1254</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1298</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="22" parent="7" name="plpgsql">
@@ -61703,7 +61703,7 @@ r/10
     <table id="5148" parent="21" name="ticket">
       <ObjectId>24721</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1237</StateNumber>
+      <StateNumber>1296</StateNumber>
     </table>
     <check id="5149" parent="34" name="cardinal_number_domain_check">
       <ObjectId>13172</ObjectId>
@@ -109763,9 +109763,9 @@ umserver</ColNames>
     </column>
     <column id="16120" parent="5148" name="date">
       <Position>2</Position>
-      <DataType>date|0s</DataType>
-      <StateNumber>1169</StateNumber>
-      <TypeId>1082</TypeId>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>1293</StateNumber>
+      <TypeId>1114</TypeId>
     </column>
     <column id="16121" parent="5148" name="description">
       <Position>3</Position>
@@ -109779,9 +109779,15 @@ umserver</ColNames>
       <StateNumber>1237</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="16123" parent="5148" name="ticket_pk">
+    <column id="16123" parent="5148" name="dateresolution">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>1296</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="16124" parent="5148" name="ticket_pk">
       <ObjectId>24741</ObjectId>
-      <StateNumber>1203</StateNumber>
+      <StateNumber>1296</StateNumber>
       <ColNames>id_ticket</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -109789,14 +109795,14 @@ umserver</ColNames>
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="16124" parent="5148" name="ticket_pk">
+    <key id="16125" parent="5148" name="ticket_pk">
       <ObjectId>24742</ObjectId>
       <StateNumber>1203</StateNumber>
       <ColNames>id_ticket</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>ticket_pk</UnderlyingIndexName>
     </key>
-    <foreign-key id="16125" parent="5148" name="ticket_learner_id_learner_fk">
+    <foreign-key id="16126" parent="5148" name="ticket_learner_id_learner_fk">
       <ObjectId>24761</ObjectId>
       <StateNumber>1241</StateNumber>
       <ColNames>idx_learner</ColNames>

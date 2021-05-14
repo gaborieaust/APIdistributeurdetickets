@@ -31,7 +31,6 @@ public class TicketController {
     /*Créer des tickets en base de données*/
     @PostMapping()
     public Ticket postTicket(@RequestBody Ticket ticket){
-        System.out.println(ticket);
         return ticketDao.post(ticket);
     };
     /* pour supprimer un ticket dans la base */
@@ -39,7 +38,7 @@ public class TicketController {
     public  void deleteTicket(@PathVariable Long id) {
         ticketDao.delete(id);
     }
-    /* pour supprimer un ticket dans la base */
+
 
 
     @PutMapping("/{id}")
